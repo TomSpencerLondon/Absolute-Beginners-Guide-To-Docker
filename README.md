@@ -89,5 +89,6 @@ exit
 
 ```
 
+sudo docker run --rm -it -v ${PWD}:/code ruby bash
 
-
+We can use the above command to write code in vim or IDE of choice and then it can be run in ruby image.
