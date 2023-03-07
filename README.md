@@ -25,3 +25,4 @@ create table my_table (id varchar primary_key, int_value int, string_value varch
 insert into my_table (id, int_value, string_value) values ('abc', 42, 'as string');
 
 sudo docker-compose up -d
+sudo docker-compose stop
