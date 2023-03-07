@@ -52,3 +52,42 @@ Hello world
 root@06368b093d93:/# ls
 app.js	bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv  sys  tmp  usr  var
 ```
+
+sudo docker run --rm -it -v ${PWD}:/code python bash
+
+```
+
+tom@tom-ubuntu:~/Desktop/absolute-guide-to-docker$ sudo docker run --rm -it -v ${PWD}:/code python bash
+Unable to find image 'python:latest' locally
+latest: Pulling from library/python
+32fb02163b6b: Already exists 
+167c7feebee8: Already exists 
+d6dfff1f6f3d: Already exists 
+e9cdcd4942eb: Already exists 
+ca3bce705f6c: Already exists 
+5e1c6c4f8bbf: Pull complete 
+efba3dc31239: Pull complete 
+b45fafb4411c: Pull complete 
+70eb3e954fe5: Pull complete 
+Digest: sha256:d3c16df33787f3d03b2e096037f6deb3c1c5fc92c57994a7d6f2de018de01a6b
+Status: Downloaded newer image for python:latest
+root@eea5ace34d31:/# ls
+bin  boot  code  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@eea5ace34d31:/# cd /code
+root@eea5ace34d31:/code# ls
+README.md  docker-compose.yml
+root@eea5ace34d31:/code# echo "print(\"Hello world\")" > app.py
+root@eea5ace34d31:/code# ls
+README.md  app.py  docker-compose.yml
+root@eea5ace34d31:/code# cat app.py
+print("Hello world")
+root@eea5ace34d31:/code# python app.py
+Hello world
+root@eea5ace34d31:/code# ^C
+root@eea5ace34d31:/code# 
+exit
+
+```
+
+
+
